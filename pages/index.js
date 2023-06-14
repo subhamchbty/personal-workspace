@@ -1,6 +1,19 @@
-import { Link } from 'next/link';
+import { FacebookLogo, GitBranch, InstagramLogo, Kanban, LinkedinLogo, MagnifyingGlass, Robot } from "phosphor-react";
 
 export default function Home() {
+  const searchGoogle = () => {
+    const searchTerm = document.getElementById("search-input").value;
+    const encodedSearchTerm = encodeURIComponent(searchTerm);
+    const url = `https://www.google.com/search?q=${encodedSearchTerm}`;
+    window.location.href = url;
+  }
+
+  const handleSearch = (event) => {
+    if (event.key === "Enter") {
+      searchGoogle();
+    }
+  }
+
   return (
     <div className="main flex justify-center items-center">
       <div className="bg-black bg-opacity-50 rounded-md p-10 text-white w-3/4">
@@ -10,27 +23,18 @@ export default function Home() {
               href="https://www.facebook.com/subhamchakraborty95/"
               target="_blank"
             >
-              <img
-                className="h-8 w-8"
-                src="https://img.icons8.com/ffffff/facebook"
-              />
+              <FacebookLogo className="h-8 w-8" />
             </a>
 
             <a href="https://www.instagram.com/subhamcby/" target="_blank">
-              <img
-                className="h-8 w-8"
-                src="https://img.icons8.com/ffffff/instagram"
-              />
+              <InstagramLogo className="h-8 w-8" />
             </a>
 
             <a
-              href="https://www.linkedin.com/in/subham-chakraborty-sc/"
+              href="https://www.aedin.com/in/subham-chakraborty-sc/"
               target="_blank"
             >
-              <img
-                className="h-8 w-8"
-                src="https://img.icons8.com/ffffff/linkedin"
-              />
+              <LinkedinLogo className="h-8 w-8" />
             </a>
           </div>
 
@@ -40,25 +44,13 @@ export default function Home() {
               type="text"
               className="w-full bg-transparent text-white border border-white pl-4 pr-10 py-2 rounded"
               placeholder="Search"
-              onkeydown="handleSearch(event)"
+              onKeyDown={handleSearch}
             />
             <button
-              onclick="searchGoogle()"
+              onClick={searchGoogle}
               className="absolute right-0 top-0 bottom-0 mr-2 bg-transparent text-white flex items-center justify-center"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="w-6 h-6"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
+              <MagnifyingGlass className="h-5 w-5" />
             </button>
           </div>
         </div>
@@ -82,7 +74,7 @@ export default function Home() {
                   <p className="text-[10px]">Chat with an AI</p>
                 </div>
 
-                <i className="fas fa-robot"></i>
+                <Robot fontSize={20}/>
               </a>
             </div>
 
@@ -97,12 +89,12 @@ export default function Home() {
                   <p className="text-[10px]">Organize anything, together.</p>
                 </div>
 
-                <i className="fas fa-solar-panel"></i>
+                <Kanban fontSize={20}/>
               </a>
             </div>
 
             <div className="border border-white w-full rounded-sm p-3 bg-slate-500 bg-opacity-50 hover:bg-slate-600 hover:bg-opacity-50">
-              <Link
+              <a
                 href="https://github.com"
                 target="_blank"
                 className="flex justify-between items-center"
@@ -113,7 +105,9 @@ export default function Home() {
                     Where the world builds software.
                   </p>
                 </div>
-              </Link>
+
+                <GitBranch fontSize={20}/>
+              </a>
             </div>
           </div>
         </div>
