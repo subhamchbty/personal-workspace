@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  background: url(//misc-devsvillage.s3.ap-south-1.amazonaws.com/spider-man-pose-4k-marvel-iphone-smvl5qt9rocmmzyh.jpg)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.neonText {
+  position: relative;
+  /* font-family: 'Pacifico', cursive; */
+  letter-spacing: 10px;
+  color: #0e3742;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.7em;
+  outline: none;
+  animation: text 2.5s linear infinite;
+}
+
+::selection {
+  color: currentColor;
+  background-color: #03bcf422;
+}
+
+@keyframes text {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: 0 0 5px #0e3742;
+  }
+
+  18.1%,
+  20.1%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
