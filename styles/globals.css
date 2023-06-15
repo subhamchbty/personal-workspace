@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .main {
-  background: url(//misc-devsvillage.s3.ap-south-1.amazonaws.com/spider-man-pose-4k-marvel-iphone-smvl5qt9rocmmzyh.jpg)
-    no-repeat;
+  background: url(//misc-devsvillage.s3.ap-south-1.amazonaws.com/spider-man-pose-4k-marvel-iphone-smvl5qt9rocmmzyh.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -13,8 +12,7 @@
 
 .neonText {
   position: relative;
-  /* font-family: 'Pacifico', cursive; */
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   color: #0e3742;
   text-transform: uppercase;
   text-align: center;
@@ -30,6 +28,7 @@
 }
 
 @keyframes text {
+
   0%,
   18%,
   20%,
