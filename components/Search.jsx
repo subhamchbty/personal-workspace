@@ -23,7 +23,7 @@ function Search() {
         onChange={(e) => setTerm(e.target.value)}
         type="text"
         className="w-full bg-transparent text-white border border-white pl-4 pr-10 py-2 rounded"
-        placeholder="Search"
+        placeholder="Google Search"
         onKeyDown={handleSearch}
       />
       <button

@@ -4,6 +4,8 @@ import Search from "../components/Search";
 import Bookmark from "../components/Bookmark";
 import NeonText from "../components/NeonText";
 import Footer from "../components/Footer";
+import Clock from "../components/Clock";
+import Weather from "../components/Weather";
 
 const bookmarks = [
   {
@@ -41,7 +43,16 @@ const bookmarks = [
 export default function Home() {
   return (
     <div className="relative">
-      <div className="main flex justify-center items-center">
+      <div className="absolute px-4 pt-4 flex justify-between w-full">
+        <Clock />
+        <Weather />
+      </div>
+      <div
+        className="main flex justify-center items-center"
+        style={{
+          background: `url(//misc-devsvillage.s3.ap-south-1.amazonaws.com/moon-1859616_1920.jpg) no-repeat`,
+        }}
+      >
         <div className="bg-black bg-opacity-50 rounded-md p-10 text-white md:w-1/2 lg:w-1/3 xl:w-2/4">
           <div className="flex flex-row justify-between items-center gap-10">
             <Search />

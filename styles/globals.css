@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 .main {
-  background: url(//misc-devsvillage.s3.ap-south-1.amazonaws.com/spider-man-pose-4k-marvel-iphone-smvl5qt9rocmmzyh.jpg) no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   height: 100vh;
   width: 100%;
 }
