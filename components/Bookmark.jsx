@@ -6,7 +6,7 @@ function Bookmark({ title, description, url, icon: Icon }) {
       <a
         href={url}
         target="_blank"
-        className="flex justify-between items-center text-white"
+        className="flex justify-between items-center text-white hover:no-underline hover:text-slate-200"
       >
         <div className="gap-2">
           <p className="font-bold">{title}</p>

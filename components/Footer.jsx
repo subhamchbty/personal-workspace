@@ -28,7 +28,11 @@ function Footer() {
     <div className="text-white absolute bottom-0 flex justify-between items-center gap-10 w-full mb-2 px-4">
       <p className="text-center">
         Made with ❤️ by{" "}
-        <a href="https://github.com/subhamchbty" target="_blank">
+        <a
+          href="https://github.com/subhamchbty"
+          target="_blank"
+          className="hover:no-underline"
+        >
           @subhamchbty
         </a>
       </p>
@@ -40,7 +44,7 @@ function Footer() {
         <a
           href="https://github.com/subhamchbty/personal-workspace"
           target="_blank"
-          className="text-white flex gap-1"
+          className="text-white flex gap-1 hover:no-underline hover:text-slate-200"
         >
           <GithubLogo className="h-5 w-5" />
           <span>Github Repo</span>
