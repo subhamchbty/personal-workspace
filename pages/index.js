@@ -1,4 +1,4 @@
-import { Desktop, Gear, GitBranch, Kanban, Robot } from "phosphor-react";
+import { Desktop, Gear, GitBranch, Kanban, Plus, Robot } from "phosphor-react";
 import SocialIcons from "../components/SocialIcons";
 import Search from "../components/Search";
 import Bookmark from "../components/Bookmark";
@@ -6,6 +6,8 @@ import NeonText from "../components/NeonText";
 import Footer from "../components/Footer";
 import Clock from "../components/Clock";
 import Weather from "../components/Weather";
+import { useState } from "react";
+import { Button, Modal } from "rsuite";
 
 const bookmarks = [
   {
@@ -41,6 +43,8 @@ const bookmarks = [
 ];
 
 export default function Home() {
+  const [openAddNewBookmark, setOpenAddNewBookmark] = useState(false);
+
   return (
     <div className="relative">
       <div className="absolute px-4 pt-4 flex justify-between w-full">
@@ -81,11 +85,36 @@ export default function Home() {
                   className="col-span-1"
                 />
               ))}
+              <div
+                className="border border-white rounded-sm p-3 bg-green-200 bg-opacity-50 hover:bg-green-300 hover:bg-opacity-50 w-full cursor-pointer"
+                onClick={() => setOpenAddNewBookmark(true)}
+              >
+                <div className="flex justify-between items-center text-white hover:no-underline hover:text-slate-200 w-full h-full">
+                  <div className="flex flex-col justify-start">
+                    <span className="font-bold">Add New</span>
+                    <span className="text-[10px]">Bookmark</span>
+                  </div>
+
+                  <Plus fontSize={20} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <Footer />
+
+      <Modal
+        open={openAddNewBookmark}
+        onClose={() => setOpenAddNewBookmark(false)}
+      >
+        <Modal.Header>
+          <Modal.Title>Add Bookmarks</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <span>Add new bookmark</span>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

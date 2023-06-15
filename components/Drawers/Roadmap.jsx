@@ -3,24 +3,24 @@ import React from "react";
 import { List } from "rsuite";
 
 const roadmap = [
-  { title: "Re-arrange bookmarks", completed: false },
-  { title: "Add bookmarks", completed: false },
-  { title: "Add search engines", completed: false },
+  { title: "Add clock", completed: true },
+  { title: "Add weather", completed: true },
+  { title: "Add bookmarks [WORKING ON IT]", completed: false },
+  { title: "Add settings", completed: false },
   { title: "Add social icons", completed: false },
   { title: "Edit bookmarks", completed: false },
   { title: "Edit neon text", completed: false },
+  { title: "Add search engines", completed: false },
+  { title: "Re-arrange bookmarks", completed: false },
   { title: "Adjust columns", completed: false },
   { title: "Display options (title, description, icon)", completed: false },
   { title: "Add custom background image", completed: false },
   { title: "Add tooltips on bookmarks hover", completed: false },
   { title: "Add animations", completed: false },
-  { title: "Add settings", completed: false },
-  { title: "Add Docs", completed: false },
   { title: "Login with Google to save progress", completed: false },
   { title: "Add dark mode", completed: false },
   { title: "Add light mode", completed: false },
-  { title: "Add weather", completed: true },
-  { title: "Add clock", completed: true },
+  { title: "Add Docs", completed: false },
 ];
 
 function Roadmap() {
